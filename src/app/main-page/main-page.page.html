@@ -1,0 +1,84 @@
+<!-- <ion-toolbar color="dark">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+    <ion-title>travel</ion-title>
+  </ion-buttons>
+</ion-toolbar> -->
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button color="dark" expand="block" shape="round" (click)="verPerfil()">Perfil</ion-button>
+    <ion-button color="dark" expand="block" shape="round" (click)="verItinerario()">Itinerário</ion-button>
+    <ion-button color="dark" expand="block" shape="round" (click)="verAssinatura()" >Assinatura</ion-button>
+    <ion-button color="dark" expand="block" shape="round" (click)="sairApp()">Sair</ion-button>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Travel</ion-title>
+        <ion-buttons slot="end">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content class="ion-padding">
+    <!-- Barra de Pesquisa -->
+    <ion-searchbar placeholder="Pesquisar destinos, hotéis, voos"></ion-searchbar>
+
+    <!-- Banner de Destaque -->
+    <ion-card class="banner">
+      <img src="https://img.freepik.com/vetores-premium/design-de-modelo-de-capa-promocional-de-anuncios-de-viagens_1033790-1195.jpg?w=1060" alt="Banner">
+      <ion-card-header>
+        <ion-card-title>Ofertas e Destinos Populares</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <!-- Categorias -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" color="secondary" (click)="verDestinos()">Destinos</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" color="tertiary" (click)="verVoos()">Voos</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" color="success" (click)="verHoteis()">Hotéis</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" color="warning" (click)="verPacotes()">Pacotes</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Recomendados para Você -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Recomendados para Você</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+        <ion-item *ngFor="let item of recomendados">
+          <ion-thumbnail slot="start">
+            <img [src]="item.imagem">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ item.titulo }}</h2>
+            <p>{{ item.descricao }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </ion-content>
+
+
+</div>

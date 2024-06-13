@@ -1,0 +1,37 @@
+<ion-toolbar color="dark">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/main-page"></ion-back-button>
+    <ion-title>Destinos</ion-title>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="ion-padding">
+
+  <!-- Barra de Pesquisa -->
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterDestinations($event)" placeholder="Pesquisar destinos"></ion-searchbar>
+
+  <!-- Filtros -->
+  <ion-item>
+    <ion-label>Ordenar por</ion-label>
+    <ion-select [(ngModel)]="filter" (ionChange)="applyFilter()">
+      <ion-select-option value="price">Preço</ion-select-option>
+      <ion-select-option value="popularity">Popularidade</ion-select-option>
+      <ion-select-option value="rating">Avaliação</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Resultados de Pesquisa -->
+  <ion-list>
+    <ion-item *ngFor="let destino of filteredDestinos">
+      <ion-thumbnail slot="start">
+        <img [src]="destino.imagem">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ destino.nome }}</h2>
+        <p>{{ destino.descricao }}</p>
+      </ion-label>
+      <ion-button color="dark" expand="block" shape="round" slot="end" (click)="adicionarAoItinerario(destino)">Adicionar ao Itinerário</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

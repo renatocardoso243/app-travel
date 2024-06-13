@@ -1,0 +1,35 @@
+.main-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ion-input {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+}
+
+#make-account a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+ion-content {
+  --ion-background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,27 +1,42 @@
-#container {
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#main-title {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#main-title h1 {
+  font-size: 40px;
+  font-family: 'Dosis';
+  font-weight: bold;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#main-text {
+  text-align: center;
+  font-family: 'Dosis';
 }
 
-#container a {
-  text-decoration: none;
+#buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media (max-width: 767px) {
+  ion-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+ion-button {
+  margin-top: 20px;
+  height: 50px;
+
 }

@@ -1,0 +1,77 @@
+<ion-toolbar color="dark">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/main-page"></ion-back-button>
+    <ion-title>Perfil do Usuário</ion-title>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="ion-padding">
+
+  <!-- Informações Pessoais -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Informações Pessoais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/user1.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>João Silva</h2>
+          <p>Email: joao.silva&#64;gmail.com</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Histórico de Viagens -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Histórico de Viagens</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let viagem of historicoViagens">
+        <ion-label>
+          <h2>{{ viagem.destino }}</h2>
+          <p>{{ viagem.data }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Configurações -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Configurações</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Notificações</ion-label>
+        <ion-toggle slot="end" checked></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Preferências de Viagem</ion-label>
+        <ion-select>
+          <ion-select-option value="econômica">Econômica</ion-select-option>
+          <ion-select-option value="executiva">Executiva</ion-select-option>
+          <ion-select-option value="primeira-classe">Primeira Classe</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Gerenciamento de Assinatura -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Gerenciamento de Assinatura</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Plano Atual: Anual</ion-label>
+        <ion-button color="dark" expand="block" shape="round">Gerenciar Assinatura</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-toolbar color="dark">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/main-page"></ion-back-button>
+    <ion-title>Travel+</ion-title>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="ion-padding">
+
+  <!-- Descrição dos Benefícios -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Benefícios do Explore Plus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Acesso a ofertas exclusivas</li>
+        <li>Descontos em reservas de hotéis e voos</li>
+        <li>Suporte prioritário</li>
+        <li>Conteúdo personalizado</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Planos de Assinatura -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Planos de Assinatura</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Mensal - R$ 29,99/mês</ion-label>
+        <ion-radio slot="start" value="mensal"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anual - R$ 299,99/ano</ion-label>
+        <ion-radio slot="start" value="anual"></ion-radio>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botão Assinar Agora -->
+  <ion-button color="dark" expand="block" shape="round">Assinar Agora</ion-button>
+
+  <!-- Testemunhos de Usuários -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>O que nossos usuários dizem</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/user1.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>João Silva</h2>
+          <p>"A Explore Plus transformou minhas viagens! Os descontos e ofertas são incríveis."</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/user2.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Maria Fernandes</h2>
+          <p>"Excelente suporte e ótimas ofertas. Recomendo a todos!"</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

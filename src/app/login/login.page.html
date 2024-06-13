@@ -1,0 +1,36 @@
+<div class="ion-page" id="main-content">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  <ion-content class="ion-padding">
+    <div class="main-img">
+      <img src="/assets/logo.png" alt="travel">
+    </div>
+    <br><br><br>
+    <div>
+      <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Digite seu email"></ion-input>
+      <br>
+      <ion-input type="password" label="Senha" label-placement="floating" fill="outline" placeholder="Digite sua senha"></ion-input>
+    </div>
+    <br>
+    <div class="ion-text-end">
+      <a href="#">Esqueceu sua senha?</a>
+    </div>
+    <div class="or-separator">
+      <span>ou</span>
+    </div>
+    <div class="social-icons">
+      <ion-icon name="logo-google" class="icon"></ion-icon>
+      <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+      <ion-icon name="logo-facebook" class="icon"></ion-icon>
+    </div>
+    <!--<br><br><br><br><br><br><br><br><br><br><br>-->
+    <div  class="ion-text-center" id="make-account">
+      <a href="/criar-conta">Não possui uma conta? <strong>Registre-se!</strong></a>
+      <ion-button color="dark" expand="block" shape="round" (click)="goAccess()">Entrar</ion-button>
+    </div>
+  </ion-content>
+</div>

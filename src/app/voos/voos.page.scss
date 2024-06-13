@@ -1,0 +1,34 @@
+ion-content {
+  --ion-background-color: #ffffff; /* Cor de fundo da tela de reserva de voos */
+}
+
+ion-item {
+  --ion-background-color: #f5f5f5; /* Cor de fundo dos itens de lista */
+  --ion-border-color: #ccc; /* Cor da borda dos itens de lista */
+  margin: 8px 0; /* Ajusta o espaço entre os itens */
+}
+
+ion-label {
+  display: block;
+}
+
+ion-button {
+  --background: var(--ion-color-secondary); /* Cor do botão */
+  --color: #fff;
+  margin-top: 8px; /* Espaçamento entre o botão e o item */
+}
+
+@media (max-width: 767px) {
+  ion-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ion-label {
+    margin-bottom: 8px;
+  }
+
+  ion-button {
+    width: 100%;
+  }
+}

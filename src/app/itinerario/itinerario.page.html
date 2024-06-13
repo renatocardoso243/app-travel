@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Itinerário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Resumo das Reservas -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumo das Reservas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let reserva of reservas">
+          <ion-label>
+            <h2>{{ reserva.tipo }}</h2>
+            <p>{{ reserva.detalhes }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Calendário de Viagem -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Calendário de Viagem</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime display-format="MMM DD, YYYY" [(ngModel)]="dataViagem"></ion-datetime>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Adicionar Nova Atividade ou Destino -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Adicionar Nova Atividade ou Destino</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nova Atividade ou Destino</ion-label>
+        <ion-input [(ngModel)]="novaAtividade" placeholder="Digite aqui..."></ion-input>
+      </ion-item>
+      <ion-button color="dark" expand="block" shape="round" (click)="adicionarAtividade()">Adicionar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button color="dark" expand="block" shape="round" (click)="compartilharItinerario()">Compartilhar Itinerário</ion-button>
+
+</ion-content>

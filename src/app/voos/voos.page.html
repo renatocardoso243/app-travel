@@ -1,0 +1,35 @@
+<ion-toolbar color="dark">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+    <ion-title>Reserva de Voos</ion-title>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="ion-padding">
+
+  <!-- Barra de Pesquisa -->
+  <form>
+    <ion-item>
+      <ion-label position="floating">Origem</ion-label>
+      <ion-input type="text" [(ngModel)]="searchData.origem" name="origem"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="searchData.destino" name="destino"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data de Ida</ion-label>
+      <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="searchData.dataIda" name="dataIda"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data de Volta</ion-label>
+      <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="searchData.dataVolta" name="dataVolta"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Passageiros</ion-label>
+      <ion-input type="number" [(ngModel)]="searchData.passageiros" name="passageiros"></ion-input>
+    </ion-item>
+    <ion-button color="dark" expand="block" shape="round" type="submit">Pesquisar</ion-button>
+  </form>
+
+</ion-content>
